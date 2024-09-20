@@ -1,5 +1,11 @@
-import telebot # pip install pyTelegramBotAPI
-from telebot import types, TeleBot
+import os
+
+try:
+    import telebot # pip install pyTelegramBotAPI
+    from telebot import types, TeleBot
+except ImportError:
+    input(f'Нажмите Enter для установки библиотеки...')
+    os.system('pip install pyTelegramBotAPI')
 
 token = 'your token.'
 id_of_channel = 'ID of your Telegram channel.'
